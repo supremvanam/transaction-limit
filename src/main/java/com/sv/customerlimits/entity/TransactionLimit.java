@@ -21,5 +21,5 @@ public class TransactionLimit {
     private Long limitId;
     private Integer dailyLimit;
     private Integer weeklyLimit;
-
+    private Integer monthlyLimit;
 }

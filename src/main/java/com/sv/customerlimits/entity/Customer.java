@@ -23,10 +23,11 @@ public class Customer {
     private String email;
     private String mobile;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(
             name = "limit_id",
             referencedColumnName = "limitId"
+
     )
     private TransactionLimit transactionLimit;
 }
