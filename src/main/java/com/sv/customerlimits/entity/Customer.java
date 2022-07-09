@@ -1,5 +1,6 @@
 package com.sv.customerlimits.entity;
 
+import com.sv.customerlimits.client.TLModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,12 +23,13 @@ public class Customer {
     private String lastName;
     private String email;
     private String mobile;
+    private Long limitId;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(
-            name = "limit_id",
-            referencedColumnName = "limitId"
-
-    )
-    private TransactionLimit transactionLimit;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(
+//            name = "limit_id",
+//            referencedColumnName = "limitId"
+//
+//    )
+//    private TransactionLimit transactionLimit;
 }
